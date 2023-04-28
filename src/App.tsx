@@ -3,27 +3,24 @@ import Menu from "./components/menu/Menu";
 import Navbar from "./components/Navbar/Navbar";
 
 const Container = styled.div`
-display: flex;
+  display: flex;
 `;
 const Main = styled.div`
-flex: 7;
+  flex: 7;
 `;
-const Wrapper = styled.div`
-
-`;
-
+const Wrapper = styled.div``;
 
 const App: React.FC = () => {
-  return <Container>
-    <Menu />
+  return (
+    <Container>
+      <Menu />
 
-    <Main>
-      <Navbar />
-      <Wrapper>
-        videos
-      </Wrapper>
-    </Main>
-  </Container>;
+      <Main>
+        <Navbar />
+        <Wrapper>videos</Wrapper>
+      </Main>
+    </Container>
+  );
 };
 
 export default App;
