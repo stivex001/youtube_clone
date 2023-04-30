@@ -1,25 +1,31 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Menu from "./components/menu/Menu";
 import Navbar from "./components/Navbar/Navbar";
+import { darkTheme, lightTheme } from "./utils/Theme";
+import { useState } from "react";
 
 const Container = styled.div`
   display: flex;
 `;
 const Main = styled.div`
   flex: 7;
+  background-color: #181818;
 `;
 const Wrapper = styled.div``;
 
 const App: React.FC = () => {
+  const [darkMode, setDarkMode] = useState<boolean>(true);
   return (
-    <Container>
-      <Menu />
+    <ThemeProvider theme={darkMode? darkTheme : lightTheme}>
+      <Container>
+        <Menu setDarkMode={setDarkMode} darkMode={darkMode}/>
 
-      <Main>
-        <Navbar />
-        <Wrapper>videos</Wrapper>
-      </Main>
-    </Container>
+        <Main>
+          <Navbar />
+          <Wrapper>videos</Wrapper>
+        </Main>
+      </Container>
+    </ThemeProvider>
   );
 };
 

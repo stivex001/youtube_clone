@@ -2,6 +2,7 @@ import styled from "styled-components";
 import youtube from "../../assets/Group.png";
 import {
   ArticleOutlined,
+  DarkModeOutlined,
   ExploreOutlined,
   HelpOutlineOutlined,
   HistoryOutlined,
@@ -22,10 +23,12 @@ import ActionButton from "../shared/ActionButton";
 
 const Container = styled.div`
   flex: 1;
-  background-color: #212121;
-  height: 100vh;
-  color: white;
+  background-color: ${({ theme }) => theme.bg};
+  height: 100%;
+  color: ${({ theme }) => theme.text};
   font-size: 14px;
+  position: sticky;
+  top: 0;
 `;
 const Wrapper = styled.div`
   padding: 18px 26px;
@@ -42,14 +45,16 @@ const Img = styled.img`
 `;
 const Hr = styled.hr`
   margin: 15px 0px;
-  border: 0.5px solid #373737;
+  border: 0.5px solid ${({ theme }) => theme.soft};
 `;
 const Login = styled.div``;
 
+type Props = {
+  setDarkMode: (value: boolean) => void;
+  darkMode: boolean;
+};
 
-// type Props = {};
-
-const Menu = () => {
+const Menu = ({ setDarkMode, darkMode }: Props) => {
   return (
     <Container>
       <Wrapper>
@@ -59,29 +64,104 @@ const Menu = () => {
         </Logo>
 
         {/* NavLINKs */}
-        <Links icons={<Home />} title="Home" />
-        <Links icons={<ExploreOutlined />} title="Explore" />
-        <Links icons={<SubscriptionsOutlined />} title="Subscriptions" />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<Home />}
+          title="Home"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<ExploreOutlined />}
+          title="Explore"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<SubscriptionsOutlined />}
+          title="Subscriptions"
+        />
         <Hr />
-        <Links icons={<LibraryBooksOutlined />} title="Library" />
-        <Links icons={<HistoryOutlined />} title="History" />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<LibraryBooksOutlined />}
+          title="Library"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<HistoryOutlined />}
+          title="History"
+        />
         <Hr />
         <Login>
           Sign in to like videos, comment, and subscribe
           <ActionButton>SIGN IN</ActionButton>
         </Login>
         <Hr />
-        <Links icons={<LibraryMusicOutlined />} title="Music" />
-        <Links icons={<SportsBasketballOutlined />} title="Sport" />
-        <Links icons={<SportsEsportsOutlined />} title="Gaming" />
-        <Links icons={<MovieOutlined />} title="Movies" />
-        <Links icons={<ArticleOutlined />} title="News" />
-        <Links icons={<LiveTvOutlined />} title="Live" />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<LibraryMusicOutlined />}
+          title="Music"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<SportsBasketballOutlined />}
+          title="Sport"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<SportsEsportsOutlined />}
+          title="Gaming"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<MovieOutlined />}
+          title="Movies"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<ArticleOutlined />}
+          title="News"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<LiveTvOutlined />}
+          title="Live"
+        />
         <Hr />
-        <Links icons={<SettingsOutlined />} title="Settings" />
-        <Links icons={<ReportOutlined />} title="Report" />
-        <Links icons={<HelpOutlineOutlined />} title="Help" />
-        <Links icons={<LightModeOutlined />} title="Light Mode" />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<SettingsOutlined />}
+          title="Settings"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<ReportOutlined />}
+          title="Report"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={<HelpOutlineOutlined />}
+          title="Help"
+        />
+        <Links
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          icons={darkMode ? <LightModeOutlined /> : <DarkModeOutlined />}
+          title={darkMode ? "Light Mode" : "Dark Mode"}
+        />
       </Wrapper>
     </Container>
   );

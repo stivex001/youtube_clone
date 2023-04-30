@@ -11,12 +11,20 @@ const Items = styled.div`
 type Props = {
   icons: React.ReactNode;
   title: string;
+  setDarkMode: (value: boolean) => void;
+  darkMode: boolean;
 };
 
-const Links = ({ icons, title }: Props) => {
+const Links = ({ icons, title, setDarkMode, darkMode }: Props) => {
+  const handleClick = () => {
+    if (title === "Light Mode" || title === "Dark Mode") {
+      setDarkMode(!darkMode);
+    }
+  };
+
   return (
     <div>
-      <Items>
+      <Items onClick={handleClick}>
         {icons}
         {title}
       </Items>
