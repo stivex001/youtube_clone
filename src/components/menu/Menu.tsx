@@ -40,6 +40,12 @@ const Logo = styled.div`
   font-weight: bold;
   margin-bottom: 25px;
 `;
+const Title = styled.h2`
+font-size: 14px;
+font-weight: 500;
+color: #aaaaaa;
+margin-bottom: 20px;
+`;
 const Img = styled.img`
   height: 25px;
 `;
@@ -101,6 +107,7 @@ const Menu = ({ setDarkMode, darkMode }: Props) => {
           <ActionButton>SIGN IN</ActionButton>
         </Login>
         <Hr />
+        <Title>BEST OF BAITUBE</Title>
         <Links
           setDarkMode={setDarkMode}
           darkMode={darkMode}
