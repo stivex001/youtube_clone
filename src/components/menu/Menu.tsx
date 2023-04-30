@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import youtube from "../../assets/Group.png";
 import {
-  AccountCircleOutlined,
   ArticleOutlined,
   ExploreOutlined,
   HelpOutlineOutlined,
@@ -19,6 +18,7 @@ import {
   SubscriptionsOutlined,
 } from "@mui/icons-material";
 import Links from "../Navbar/Links";
+import ActionButton from "../shared/ActionButton";
 
 const Container = styled.div`
   flex: 1;
@@ -45,19 +45,7 @@ const Hr = styled.hr`
   border: 0.5px solid #373737;
 `;
 const Login = styled.div``;
-const Button = styled.button`
-  padding: 5px 15px;
-  background-color: transparent;
-  border: 1px solid #3ea6ff;
-  color: #3ea6ff;
-  border-radius: 3px;
-  font-weight: 500;
-  margin-top: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-`;
+
 
 // type Props = {};
 
@@ -80,9 +68,7 @@ const Menu = () => {
         <Hr />
         <Login>
           Sign in to like videos, comment, and subscribe
-          <Button>
-            <AccountCircleOutlined /> SIGN IN
-          </Button>
+          <ActionButton>SIGN IN</ActionButton>
         </Login>
         <Hr />
         <Links icons={<LibraryMusicOutlined />} title="Music" />
