@@ -5,6 +5,7 @@ import { darkTheme, lightTheme } from "./utils/Theme";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
+import Video from "./pages/videos/Video";
 
 const Container = styled.div`
   display: flex;
@@ -27,6 +28,7 @@ const App: React.FC = () => {
             <Wrapper>
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/video:id" element={<Video/>} />
               </Routes>
             </Wrapper>
           </Main>
