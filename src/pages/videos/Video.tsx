@@ -5,6 +5,8 @@ import {
   ThumbUpOutlined,
 } from "@mui/icons-material";
 import styled from "styled-components";
+import Comments from "../../components/comments/Comments";
+import Card from "../../components/shared/Card";
 
 const Container = styled.div`
   display: flex;
@@ -134,9 +136,18 @@ const Video = (props: Props) => {
             </ChannelDetail>
           </ChanneInfo>
           <Subscripe>SUBSCRIBE</Subscripe>
-        </Channel>
+        </Channel> 
+        <Hr />
+        <Comments />
       </Content>
-      <Recommendation>Recomaneygsyug</Recommendation>
+      <Recommendation>
+        <Card title='sm' />
+        <Card title='sm' />
+        <Card title='sm' />
+        <Card title='sm' />
+        <Card title='sm' />
+        <Card title='sm' />
+      </Recommendation>
     </Container>
   );
 };
