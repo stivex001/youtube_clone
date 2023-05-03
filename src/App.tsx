@@ -14,7 +14,9 @@ const Main = styled.div`
   flex: 7;
   background-color: ${({ theme }) => theme.bgLighter};
 `;
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+padding: 22px 96px;
+`;
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
