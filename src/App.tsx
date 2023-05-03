@@ -27,7 +27,7 @@ const App: React.FC = () => {
         <BrowserRouter>
           <Menu setDarkMode={setDarkMode} darkMode={darkMode} />
           <Main>
-            <Navbar />
+            <Navbar  darkMode={darkMode} setDarkMode={setDarkMode}/>
             <Wrapper>
               <Routes>
                 <Route path="/" element={<Home />} />

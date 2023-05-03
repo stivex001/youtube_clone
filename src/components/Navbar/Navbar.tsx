@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import ActionButton from "../shared/ActionButton";
-import { SearchOutlined } from "@mui/icons-material";
+import {
+  DarkModeOutlined,
+  LightModeOutlined,
+  SearchOutlined,
+} from "@mui/icons-material";
 
 const Container = styled.div`
   position: sticky;
@@ -24,7 +28,7 @@ const Search = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  margin:  auto;
+  margin: auto;
   padding: 5px;
   border: 1px solid #cccccc;
   border-radius: 3px;
@@ -35,9 +39,22 @@ const Input = styled.input`
   outline: none;
 `;
 
-type Props = {};
+const Action = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+`;
 
-const Navbar = (props: Props) => {
+type Props = {
+  darkMode: boolean;
+  setDarkMode: (value: boolean) => void;
+};
+
+const Navbar = ({ darkMode, setDarkMode }: Props) => {
+  const handleClick = () => {
+    setDarkMode(!darkMode);
+  };
   return (
     <Container>
       <Wrapper>
@@ -45,7 +62,15 @@ const Navbar = (props: Props) => {
           <Input placeholder="Search" />
           <SearchOutlined />
         </Search>
-        <ActionButton>SIGN IN</ActionButton>
+        <Action>
+          <ActionButton>SIGN IN</ActionButton>
+
+          {darkMode ? (
+            <LightModeOutlined onClick={handleClick} />
+          ) : (
+            <DarkModeOutlined onClick={handleClick} />
+          )}
+        </Action>
       </Wrapper>
     </Container>
   );
