@@ -12,13 +12,28 @@ const Img = styled.img`
   background-color: #999;
 `;
 const Details = styled.div`
-display: flex;
-gap: 12px;
-margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
 `;
-const Title = styled.p``;
-const Subt = styled.span``;
-
+const Texts = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const Title = styled.p`
+  font-size: 16px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text};
+`;
+const Subt = styled.span`
+  font-size: 14px;
+  color: ${({ theme }) => theme.textSoft};
+  margin: 9px 0px;
+`;
+const Info = styled.span`
+  font-size: 14px;
+  color: ${({ theme }) => theme.textSoft};
+`;
 const Profile = styled.img`
   width: 36px;
   height: 36px;
@@ -34,11 +49,11 @@ const Card: React.FC = (props: Props) => {
           src="https://avatars.githubusercontent.com/u/87942124?v=4"
           alt=""
         />
-        <div>
+        <Texts>
           <Title>To create a roduction build, use npm run build...</Title>
           <Subt>Bai Codes</Subt>
-          <Subt>660,908 views - 1 day ago</Subt>
-        </div>
+          <Info>660,908 views - 1 day ago</Info>
+        </Texts>
       </Details>
     </Container>
   );
