@@ -6,6 +6,10 @@ const Items = styled.div`
   gap: 20px;
   cursor: pointer;
   padding: 8px 0px;
+
+  &:hover {
+    background-color: ${({theme}) => theme.soft};
+  }
 `;
 
 type Props = {
