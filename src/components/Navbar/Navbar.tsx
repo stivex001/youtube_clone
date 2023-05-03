@@ -24,7 +24,7 @@ const Search = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  margin: 0 auto;
+  margin:  auto;
   padding: 5px;
   border: 1px solid #cccccc;
   border-radius: 3px;
