@@ -21,9 +21,7 @@ const Input = styled.input`
   width: 100%;
 `;
 
-type Props = {};
-
-const Comments = (props: Props) => {
+const Comments: React.FC = () => {
   return (
     <Container>
       <NewComment>

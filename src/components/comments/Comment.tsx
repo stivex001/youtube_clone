@@ -18,20 +18,18 @@ const Details = styled.div`
 `;
 
 const Name = styled.span`
-font-size: 13px;
-font-weight: 500;
+  font-size: 13px;
+  font-weight: 500;
 `;
 const Date = styled.span`
-font-size: 12px;
-font-weight: 400;
-color: ${({ theme }) => theme.textSoft};
-margin-left: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.textSoft};
+  margin-left: 5px;
 `;
 const Text = styled.span``;
 
-type Props = {};
-
-const Comment = (props: Props) => {
+const Comment: React.FC = () => {
   return (
     <Container>
       <Avatar src="https://avatars.githubusercontent.com/u/87942124?v=4" />

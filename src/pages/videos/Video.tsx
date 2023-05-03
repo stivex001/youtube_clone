@@ -89,9 +89,8 @@ const Subscripe = styled.button`
   padding: 10px 20px;
   cursor: pointer;
 `;
-type Props = {};
 
-const Video = (props: Props) => {
+const Video: React.FC = () => {
   return (
     <Container>
       <Content>
@@ -136,17 +135,17 @@ const Video = (props: Props) => {
             </ChannelDetail>
           </ChanneInfo>
           <Subscripe>SUBSCRIBE</Subscripe>
-        </Channel> 
+        </Channel>
         <Hr />
         <Comments />
       </Content>
       <Recommendation>
-        <Card title='sm' />
-        <Card title='sm' />
-        <Card title='sm' />
-        <Card title='sm' />
-        <Card title='sm' />
-        <Card title='sm' />
+        <Card title="sm" />
+        <Card title="sm" />
+        <Card title="sm" />
+        <Card title="sm" />
+        <Card title="sm" />
+        <Card title="sm" />
       </Recommendation>
     </Container>
   );
