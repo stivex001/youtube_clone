@@ -1,4 +1,5 @@
 import { AccountCircleOutlined } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -21,9 +22,12 @@ type Props = {
 
 const ActionButton = ({children}: Props) => {
   return (
-    <Button>
+    <Link to='/signin' style={{textDecoration: 'none'}}>
+        <Button>
       <AccountCircleOutlined /> {children}
     </Button>
+    </Link>
+
   );
 };
 
