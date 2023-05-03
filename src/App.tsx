@@ -15,7 +15,7 @@ const Main = styled.div`
   background-color: ${({ theme }) => theme.bgLighter};
 `;
 const Wrapper = styled.div`
-padding: 22px 96px;
+  padding: 22px 96px;
 `;
 
 const App: React.FC = () => {
@@ -30,7 +30,7 @@ const App: React.FC = () => {
             <Wrapper>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/video:id" element={<Video/>} />
+                <Route path="/video/:id" element={<Video />} />
               </Routes>
             </Wrapper>
           </Main>

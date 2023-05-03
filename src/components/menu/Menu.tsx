@@ -20,6 +20,7 @@ import {
 } from "@mui/icons-material";
 import Links from "../Navbar/Links";
 import ActionButton from "../shared/ActionButton";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   flex: 1;
@@ -41,10 +42,10 @@ const Logo = styled.div`
   margin-bottom: 25px;
 `;
 const Title = styled.h2`
-font-size: 14px;
-font-weight: 500;
-color: #aaaaaa;
-margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaaaaa;
+  margin-bottom: 20px;
 `;
 const Img = styled.img`
   height: 25px;
@@ -64,10 +65,12 @@ const Menu = ({ setDarkMode, darkMode }: Props) => {
   return (
     <Container>
       <Wrapper>
-        <Logo>
-          <Img src={youtube} />
-          BaiTube
-        </Logo>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <Logo>
+            <Img src={youtube} />
+            BaiTube
+          </Logo>
+        </Link>
 
         {/* NavLINKs */}
         <Links

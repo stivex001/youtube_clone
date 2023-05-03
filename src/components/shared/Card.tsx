@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 type Props = {};
@@ -42,20 +43,22 @@ const Profile = styled.img`
 
 const Card: React.FC = (props: Props) => {
   return (
-    <Container>
-      <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf4tRzWXEimLwK6AxnxsBiXFbf9SEfXwV0D099QhjYsg&s" />
-      <Details>
-        <Profile
-          src="https://avatars.githubusercontent.com/u/87942124?v=4"
-          alt=""
-        />
-        <Texts>
-          <Title>To create a roduction build, use npm run build...</Title>
-          <Subt>Bai Codes</Subt>
-          <Info>660,908 views - 1 day ago</Info>
-        </Texts>
-      </Details>
-    </Container>
+    <Link to="/video/test" style={{textDecoration: 'none'}}>
+      <Container>
+        <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf4tRzWXEimLwK6AxnxsBiXFbf9SEfXwV0D099QhjYsg&s" />
+        <Details>
+          <Profile
+            src="https://avatars.githubusercontent.com/u/87942124?v=4"
+            alt=""
+          />
+          <Texts>
+            <Title>To create a roduction build, use npm run build...</Title>
+            <Subt>Bai Codes</Subt>
+            <Info>660,908 views - 1 day ago</Info>
+          </Texts>
+        </Details>
+      </Container>
+    </Link>
   );
 };
 
