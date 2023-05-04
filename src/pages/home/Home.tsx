@@ -22,16 +22,16 @@ const Home = (props: Props) => {
       }}
     >
       <Container>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card title={""} />
+        <Card title={""} />
+        <Card title={""} />
+        <Card title={""} />
+        <Card title={""} />
+        <Card title={""} />
+        <Card title={""} />
+        <Card title={""} />
+        <Card title={""} />
+        <Card title={""} />
       </Container>
     </motion.div>
   );
